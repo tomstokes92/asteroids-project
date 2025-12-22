@@ -1,0 +1,1 @@
+Second project from Boot Dev - Creation of an Asteroids-like game using Python, Pygame.
