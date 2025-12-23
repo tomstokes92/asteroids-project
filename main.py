@@ -1,5 +1,6 @@
 
 import pygame
+import sys
 
 # import module section
 
@@ -45,6 +46,11 @@ def main():
         for objects in drawable:
             objects.draw(screen)
         updatable.update(dt)
+        for objects in asteroids:
+            if objects.collide_with(player):
+                log_event("player_hit")
+                print("Game over!")
+                sys.exit()
         pygame.display.flip()
         game_clock.tick(60)
         dt = game_clock.tick(60) / 1000
