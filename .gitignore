@@ -12,3 +12,5 @@ wheels/
 #ignored files
 game_state.jsonl
 game_events.jsonl
+todo.txt
+
