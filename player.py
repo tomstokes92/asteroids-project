@@ -18,7 +18,6 @@ class Player(CircleShape):
         a = self.position + forward * self.radius
         b = self.position - forward * self.radius - right
         c = self.position - forward * self.radius + right
-        print(a, b, c)
         return [a, b, c]
     # draw function
     def draw(self, screen):

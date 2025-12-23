@@ -32,7 +32,8 @@ def main():
     player = Player(
         x = SCREEN_WIDTH / 2, 
         y = SCREEN_HEIGHT / 2
-    ) 
+    )
+    player_score = 0
     # asteroid instance
     Asteroid.containers = (updatable, drawable, asteroids)
     # asteroid field instance
@@ -54,12 +55,14 @@ def main():
             if objects.collide_with(player):
                 log_event("player_hit")
                 print("Game over!")
+                print(f"Score: {player_score}")
                 sys.exit()
             for bullet in shots:
                 if bullet.collide_with(objects):
                     log_event("asteroid_shot")
-                    objects.split(asteroidsw)
+                    objects.split(asteroids)
                     bullet.kill()
+                    player_score += 1
         pygame.display.flip()
         game_clock.tick(60)
         dt = game_clock.tick(60) / 1000
