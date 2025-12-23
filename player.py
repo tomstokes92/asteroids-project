@@ -32,7 +32,7 @@ class Player(CircleShape):
         rotated_with_speed_vector = rotated_vector * PLAYER_SPEED * dt
         self.position += rotated_with_speed_vector
 
-    #rotation
+    #update self position on keypress
     def update (self, dt):
         keys = pygame.key.get_pressed()
         #turn left (key a)
@@ -41,8 +41,10 @@ class Player(CircleShape):
         #turn right (key d)
         if keys[pygame.K_d]:
             self.rotation += PLAYER_TURN_SPEED * dt
+        #move forward (key w) 
         if keys[pygame.K_w]:
            self.move(dt)
+        #move backward (key s)
         if keys[pygame.K_s]:
             self.move(-dt) 
 
