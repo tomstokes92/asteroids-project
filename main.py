@@ -31,14 +31,10 @@ def main():
                 return
         screen.fill("black")
         player.draw(screen)
+        player.update(dt)
         pygame.display.flip()
         game_clock.tick(60)
         dt = game_clock.tick(60) / 1000
-        
-
-
-
-
 
 
 #Keep line below, ensures main is called when main.py is run directly
