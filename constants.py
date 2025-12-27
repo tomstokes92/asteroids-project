@@ -1,6 +1,6 @@
 # Set Screen Resolution
 
-SCREEN_WIDTH = 1280
+SCREEN_WIDTH = 1080
 SCREEN_HEIGHT = 720
 
 # Player
